@@ -17,8 +17,8 @@ You may also see any lint errors in the console.
 ### a React dashboard app for analyzing racing driver Mindset using performance data. The app should read from a JSON file containing data for multiple drivers and display analytics for a selected driver. uses barber_telemetry_data.csv
 # Required Features:
 
-Driver Selection: Dropdown to filter data by driver ID (e.g., "GR86-002-000")
-Racing Mindset Profile:
+Driver Selection: Dropdown to filter data by driver ID (e.g., "GR86-002-000")</br>
+Racing Mindset Profile: </br>
 
 Radar/spider chart showing 6 metrics: Aggression, Consistency, Composure, Smoothness, Adaptability, and Strategy
 Values range from 0-100
