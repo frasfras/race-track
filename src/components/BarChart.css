@@ -1,0 +1,146 @@
+/* BarChart Component Styles */
+
+.bar-chart-container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-chart-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bar-chart-header h3 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.bar-chart-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.bar-chart-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.bar-chart-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.bar-chart-tooltip {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-label {
+  margin: 0 0 4px 0;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.tooltip-value {
+  margin: 0;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.bar-chart-legend {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  justify-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-text {
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .bar-chart-container {
+    margin: 5px;
+    padding: 15px;
+    min-height: 450px;
+  }
+  
+  .bar-chart-header h3 {
+    font-size: 1.25rem;
+  }
+  
+  .bar-chart-wrapper {
+    min-height: 350px;
+  }
+  
+  .legend-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bar-chart-container {
+    padding: 10px;
+    min-height: 400px;
+  }
+  
+  .bar-chart-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .bar-chart-wrapper {
+    min-height: 300px;
+  }
+  
+  .legend-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  
+  .legend-item {
+    font-size: 0.8rem;
+  }
+}
