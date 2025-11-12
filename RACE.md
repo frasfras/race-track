@@ -1,4 +1,4 @@
-# CreateS a React dashboard app for analyzing racing driver performance data. The app should read from a JSON file containing data for multiple drivers and display analytics for a selected driver.
+# CreateS a React dashboard app for analyzing racing driver  performance data. The app should read from a JSON file containing data for multiple drivers and display analytics for a selected driver.
 # Required Features:
 
 Driver Selection: Dropdown to filter data by driver ID (e.g., "GR86-002-000")

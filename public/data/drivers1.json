@@ -1,0 +1,101 @@
+  [
+    {
+      "rank": 1,
+      "vehicle_id": "GR86-002-000",
+      "session": "R1_Barber_2025-09-07",
+      "summary": {
+        "laps_analyzed": 8,
+        "duration_seconds": 1542.6
+      },
+      "features": {
+        "mean_throttle": 74.2,
+        "mean_brake": 0.13,
+        "steering_variability": 12.7,
+        "lap_distance_max": 3715.0
+      },
+      "scores": {
+        "aggression": 0.74,
+        "smoothness": 0.75,
+        "consistency": 0.62,
+        "focus": 0.93,
+        "adaptability": 0.68,
+        "strategy": 0.93,
+        "composure": 0.85,
+        "composite": 0.79
+      },
+      "overall_profile": "Strategic Driver",
+      "map": {
+        "points": [
+          { "lat": 33.53258, "lon": -86.61963, "throttle": 0.74 },
+          { "lat": 33.53259, "lon": -86.61964, "throttle": 0.52 },
+          { "lat": 33.53261, "lon": -86.61967, "throttle": 0.89 }
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "vehicle_id": "GR86-004-001",
+      "session": "R1_Barber_2025-09-07",
+      "summary": {
+        "laps_analyzed": 7,
+        "duration_seconds": 1476.2
+      },
+      "features": {
+        "mean_throttle": 80.1,
+        "mean_brake": 0.22,
+        "steering_variability": 14.8,
+        "lap_distance_max": 3720.4
+      },
+      "scores": {
+        "aggression": 0.80,
+        "smoothness": 0.70,
+        "consistency": 0.58,
+        "focus": 0.93,
+        "adaptability": 0.67,
+        "strategy": 0.87,
+        "composure": 0.82,
+        "composite": 0.77
+      },
+      "overall_profile": "Aggressive Driver",
+      "map": {
+        "points": [
+          { "lat": 33.53254, "lon": -86.61958, "throttle": 0.81 },
+          { "lat": 33.53257, "lon": -86.61960, "throttle": 0.76 },
+          { "lat": 33.53262, "lon": -86.61965, "throttle": 0.90 }
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "vehicle_id": "GR86-007-003",
+      "session": "R1_Barber_2025-09-07",
+      "summary": {
+        "laps_analyzed": 6,
+        "duration_seconds": 1339.5
+      },
+      "features": {
+        "mean_throttle": 69.4,
+        "mean_brake": 0.17,
+        "steering_variability": 16.9,
+        "lap_distance_max": 3708.2
+      },
+      "scores": {
+        "aggression": 0.69,
+        "smoothness": 0.66,
+        "consistency": 0.55,
+        "focus": 0.93,
+        "adaptability": 0.63,
+        "strategy": 0.84,
+        "composure": 0.78,
+        "composite": 0.73
+      },
+      "overall_profile": "Balanced Driver",
+      "map": {
+        "points": [
+          { "lat": 33.53250, "lon": -86.61955, "throttle": 0.69 },
+          { "lat": 33.53253, "lon": -86.61959, "throttle": 0.73 },
+          { "lat": 33.53258, "lon": -86.61963, "throttle": 0.81 }
+        ]
+      }
+    }
+]

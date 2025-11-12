@@ -6,6 +6,7 @@ import BarChart from './components/BarChart';
 import SummaryCard from './components/SummaryCard';
 import TrackMap from './components/TrackMap';
 import PDFExportButton from './components/PDFExportButton';
+import Leaderboard from './components/Leaderboard';
 import { loadDriverData } from './utils/dataLoader';
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -16,6 +17,7 @@ function App() {
   const [selectedDriverData, setSelectedDriverData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isLeaderboardOpen, setIsLeaderboardOpen] = useState(false);
 
   // Load driver data on component mount
   useEffect(() => {
@@ -28,7 +30,8 @@ function App() {
         
         // Auto-select first driver if available
         if (data.length > 0) {
-          setSelectedDriverId(data[0].vehicle_id);
+          const firstDriverKey = `${data[0].vehicle_id}_${data[0].session}`;
+          setSelectedDriverId(firstDriverKey);
         }
       } catch (err) {
         console.error('Failed to load driver data:', err);
@@ -44,7 +47,10 @@ function App() {
   // Update selected driver data when selection changes
   useEffect(() => {
     if (selectedDriverId && driversData.length > 0) {
-      const driverData = driversData.find(driver => driver.vehicle_id === selectedDriverId);
+      const driverData = driversData.find(driver => {
+        const driverKey = `${driver.vehicle_id}_${driver.session}`;
+        return driverKey === selectedDriverId;
+      });
       setSelectedDriverData(driverData || null);
     } else {
       setSelectedDriverData(null);
@@ -60,9 +66,29 @@ function App() {
     <ErrorBoundary>
       <div className="App">
         <header className="App-header">
-          <h1>Driver Insights Dashboard</h1>
-          <p>Racing Driver Performance Analytics</p>
+          <div className="header-content">
+            <div className="header-text">
+              <h1>Driver Insights Dashboard</h1>
+              <p>Racing Driver Performance Analytics</p>
+            </div>
+            <button 
+              className="leaderboard-button"
+              onClick={() => setIsLeaderboardOpen(true)}
+            >
+              🏆 Leaderboard
+            </button>
+          </div>
         </header>
+        
+        <footer className="App-footer">
+          <span>Developed by Plotly FSTech</span>
+          <span className="footer-separator">|</span>
+          <span>Data Source: Apex Insight Toyota GR telemetry - Barber</span>
+          <span className="footer-separator">|</span>
+          <span>Version 1.0.0</span>
+          <span className="footer-separator">|</span>
+          <span>Data updated 2025-09-07</span>
+        </footer>
         
         <main className="App-main">
           <div className="dashboard-container">
@@ -153,6 +179,11 @@ function App() {
             )}
           </div>
         </main>
+        
+        <Leaderboard 
+          isOpen={isLeaderboardOpen}
+          onClose={() => setIsLeaderboardOpen(false)}
+        />
       </div>
     </ErrorBoundary>
   );

@@ -90,11 +90,14 @@ const DriverSelector = ({
         <option value="" disabled>
           Choose a driver...
         </option>
-        {drivers.map((driver) => (
-          <option key={driver.vehicle_id} value={driver.vehicle_id}>
-            {driver.vehicle_id} - {driver.overall_profile}
-          </option>
-        ))}
+        {drivers.map((driver) => {
+          const driverKey = `${driver.vehicle_id}_${driver.session}`;
+          return (
+            <option key={driverKey} value={driverKey}>
+              {driver.vehicle_id} - {driver.session} - {driver.overall_profile}
+            </option>
+          );
+        })}
       </select>
       {selectedDriverId && (
         <div className="driver-selector__selected">
