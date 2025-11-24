@@ -23,8 +23,8 @@ Racing Mindset Profile: </br>
 Radar/spider chart showing 6 metrics: Aggression, Consistency, Composure, Smoothness, Adaptability, and Strategy
 Values range from 0-100
 
-#  Collab notebook 
- <a href='https://colab.research.google.com/drive/1yzqYahOIEciV6WmZ_0j58CqlFk5zwe_E?usp=sharing'> python notebook </a>
+#  Collab notebook
+ <a href='https://colab.research.google.com/drive/1yzqYahOIEciV6WmZ_0j58CqlFk5zwe_E?usp=sharing'> python notebook  Data proccessing </a>
 # Racing Mindset Breakdown:
 
 Horizontal bar chart displaying the same 6 metrics with their scores
